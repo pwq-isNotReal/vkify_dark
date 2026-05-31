@@ -8446,7 +8446,7 @@ a,
 
 .page_header .back, .page_header .left, .page_header .right, .header_navigation .logo_down {
     background: var(--dark-surface);
-    background-image: url(https://raw.githubusercontent.com/pwq-isNotReal/vkify_dark/refs/heads/main/assets/geader.webp) !important;
+    background-image: url(https://raw.githubusercontent.com/pwq-isNotReal/vkify_dark/refs/heads/main/assets/header.webp) !important;
 }
 nav,
 .navigation,
