@@ -4747,7 +4747,7 @@ input[class="button"]:active,
     width: 100%;
     position: absolute;
     height: 40px;
-    background: #4e729a;
+    background: var(--dark-surface);
     background-position: 0px -43px;
     background-repeat: repeat-x;
 }
@@ -8420,6 +8420,7 @@ a,
 
 .page_header .back, .page_header .left, .page_header .right, .header_navigation .logo_down {
     background-image: url(https://raw.githubusercontent.com/pwq-isNotReal/vkify_dark/refs/heads/main/assets/header.gif) !important;
+	background: transparent;
 }
 	
 .nav,
