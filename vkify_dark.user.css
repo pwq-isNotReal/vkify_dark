@@ -73,10 +73,6 @@ textarea,
 body {
     background-color: var(--dark-bg) !important;
 }
-#backdrop{
-    opacity: .8;
-    z-index: 0;
-}
 .nobold,
 nobold,
 nobold span {
