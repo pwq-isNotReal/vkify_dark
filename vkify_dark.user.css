@@ -1403,11 +1403,8 @@ input[class="button"]:active,
   text-decoration: none;
   font-weight: bold;
 }
-.page_header .back,
-.page_header .left,
-.page_header .right,
-.header_navigation .logo_down {
-    background: var(--dark-surface);
+.page_header .back, .page_header .left, .page_header .right, .header_navigation .logo_down {
+    background-image: url(http://raw.githubusercontent.com/pwq-isNotReal/vkify_dark/refs/heads/main/assets/header.gif) !important;
 }
 .content_title_expanded nobold,
 .content_title_expanded nobold span,
