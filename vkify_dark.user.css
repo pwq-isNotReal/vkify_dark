@@ -4736,21 +4736,6 @@ input[class="button"]:active,
 .user-alert {
   margin-left: 0px;
 }
-.page_header {
-    background: none;
-    height: 40px;
-}
-.page_header .back,
-.page_header .left,
-.page_header .right,
-.header_navigation .logo_down {
-    width: 100%;
-    position: absolute;
-    height: 40px;
-    background: var(--dark-surface);
-    background-position: 0px -43px;
-    background-repeat: repeat-x;
-}
 .page_header .left {
     background-position: 0px -1px;
     background-repeat: no-repeat;
@@ -8415,12 +8400,26 @@ a,
 .button:active {
     background-color: #1f2a48 !important;
 }
+.page_header {
+    background: none;
+    height: 40px;
+}
+.page_header .back,
+.page_header .left,
+.page_header .right,
+.header_navigation .logo_down {
+    width: 100%;
+    position: absolute;
+    height: 40px;
+    background: var(--dark-surface);
+    background-position: 0px -43px;
+    background-repeat: repeat-x;
+}
 /* тут кароч если будете менять хедер в вкифу на свой кастомный, эту строчку в коммент закиньте да
 пока коке не сделает его по дефолту прозрачным, этот кусок будет висеть тут.*/
 
 .page_header .back, .page_header .left, .page_header .right, .header_navigation .logo_down {
     background-image: url(https://raw.githubusercontent.com/pwq-isNotReal/vkify_dark/refs/heads/main/assets/header.gif) !important;
-	background: transparent;
 }
 	
 .nav,
