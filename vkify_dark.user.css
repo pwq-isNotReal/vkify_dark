@@ -79,16 +79,6 @@ h1 {
     width: 791px;
     margin: 0 auto;
 }
-
-.page_header {
-    position: relative;
-    width: 791px;
-    height: 45px;
-    background: url('../img/header.png');
-    background-repeat: no-repeat;
-    background-position: 0;
-}
-
 .page_custom_header {
     background: url('../img/header_custom.png');
 }
@@ -117,22 +107,6 @@ h1 {
     white-space: nowrap;
     text-overflow: ellipsis;
     overflow: hidden;
-}
-
-.header_navigation {
-    text-align: center;
-    line-height: 20px;
-    padding-right: 8px;
-    text-transform: lowercase;
-    float: right;
-}
-
-.header_navigation .link {
-    display: inline-block;
-    height: 29px;
-    padding: 11px 4px 0 7px;
-    background: url('../img/divider.png') no-repeat;
-    background-size: 1.5px 41px;
 }
 
 .page_header.search_expanded .header_navigation .header_divider_stick {
@@ -8445,10 +8419,10 @@ a,
 пока коке не сделает его по дефолту прозрачным, этот кусок будет висеть тут.*/
 
 .page_header .back, .page_header .left, .page_header .right, .header_navigation .logo_down {
-    background: var(--dark-surface);
     background-image: url(https://raw.githubusercontent.com/pwq-isNotReal/vkify_dark/refs/heads/main/assets/header.gif) !important;
 }
-nav,
+	
+.nav,
 .navigation,
 .navigation-fixed,
 .page_body,
