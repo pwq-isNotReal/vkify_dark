@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           VKify Dark
 @namespace      https://github.com/pwq-isNotReal/vkify_dark
-@version        0.0.67-a
+@version        0.0.69-a
 @description    VKify Dark theme
 @author         pwq
 ==/UserStyle== */
@@ -72,7 +72,7 @@ textarea,
     border-color: var(--dark-border) !important;
 }
 body {
-    background-color: var(--dark-bg) !important;
+    background-color: var(--dark-bg);
 }
 .nobold,
 nobold,
