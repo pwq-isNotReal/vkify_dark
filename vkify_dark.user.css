@@ -8165,8 +8165,6 @@ a,
 .button:active {
     background-color: #1f2a48 !important;
 }
-/* тут кароч если будете менять хедер в вкифу на свой кастомный, эту строчку в коммент закиньте да
-пока коке не сделает его по дефолту прозрачным, этот кусок будет висеть тут.*/
 
 .page_header .back, .page_header .left, .page_header .right, .header_navigation .logo_down {
     background-image: url(https://raw.githubusercontent.com/pwq-isNotReal/vkify_dark/refs/heads/main/assets/header.gif) !important;
