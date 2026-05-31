@@ -71,6 +71,9 @@ textarea,
     color: var(--dark-text) !important;
     border-color: var(--dark-border) !important;
 }
+body {
+    background-color: var(--dark-bg) !important;
+}
 .nobold,
 nobold,
 nobold span {
@@ -139,20 +142,6 @@ a {
 .navigation_footer .link:hover {
     background-color: #E4E4E4;
     border-top: 1px solid #CCCCCC;
-}
-
-#backdrop {
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    left: 0;
-    z-index: -100;
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center left, center right;
-    pointer-events: none;
-    opacity: .8;
 }
 
 #backdropDripper {
@@ -4642,9 +4631,6 @@ textarea {
 .page_yellowheader a:hover {
   text-decoration: underline;
 }
-body {
-    background-color: var(--dark-bg) !important;
-}
 
 a,
 .header_navigation .link a,
@@ -5576,45 +5562,6 @@ img[src*="/assets/packages/static/openvk/img/oxygen-icons/16x16/actions/insert-l
 }
 .post-has-geo.appended-geo #small_remove_button {
   float: right;
-}
-
-body,
-html,
-.layout,
-.page_header,
-.sidebar,
-.page_body,
-.page_wrap,
-.content-main-tile,
-.album,
-.album-photo img,
-#page_act,
-#wrapHI,
-#wrapH,
-.wrap1,
-.wrap2,
-.page_content,
-.navigation,
-.navigation-fixed,
-.navigation .link,
-.navigation_footer .link,
-.profile_link,
-#profile_link,
-.page_yellowheader,
-.page_status_popup,
-.page_footer .link,
-.outline_table,
-.menu_divider,
-.map_svg_icon,
-.post-geo a,
-.post-has-geo.appended-geo {
-    background-color: var(--dark-surface) !important;
-    color: var(--dark-text) !important;
-    border-color: var(--dark-border) !important;
-}
-
-body {
-    background-color: var(--dark-bg) !important;
 }
 
 .map_svg_icon {
@@ -7897,9 +7844,6 @@ body.dimmed > .dimmer #clickable {
     flex-direction: row;
     justify-content: center;
     align-items: center;
-}
-body {
-    background-color: var(--dark-bg) !important;
 }
 
 .map_svg_icon {
