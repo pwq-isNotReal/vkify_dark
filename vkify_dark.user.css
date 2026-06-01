@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           VKify Dark
 @namespace      https://github.com/pwq-isNotReal/vkify_dark
-@version        0.0.76-c
+@version        0.0.77
 @description    VKify Dark theme
 @author         pwq
 ==/UserStyle== */
@@ -9,6 +9,11 @@
 @-moz-document url-prefix("https://openvk.org/"), url-prefix("https://openvk.xyz/"), url-prefix("https://vepurovk.xyz") {
 :root {
     --dark-bg: #0f1218;
+    --dark-bg-tr80: #0f121880;
+    --dark-bg-tr60: #0f121860;
+    --dark-bg-tr40: #0f121840;
+    --dark-bg-tr20: #0f121820;
+    --dark-bg-tr00: transparent;
     --dark-surface: #171b22;
     --dark-surface-2: #1f2430;
     --dark-surface-3: #262b37;
@@ -19,8 +24,12 @@
     --dark-accent: #7c9cff;
     --dark-accent-3: #6280db;
     --dark-accent-2: #1d2330;
+    --dark-warning: #ffc96d;
+    --dark-warning-tr: #ffc96d35;
     --dark-danger: #ff6b6b;
+    --dark-danger-tr: #ff6b6b35;
     --dark-success: #4ade80;
+    --dark-success-tr: #4ade8035;
     --dark-hover: rgba(124, 156, 255, 0.14);
     --common-hover: #f5f4f4;
     --common-2: #f0f1f2;
@@ -142,7 +151,7 @@ a {
     height: 100%;
     margin: auto;
     background-color: var(--dark-bg);
-    box-shadow: -30px 0px 20px 20px #0f1218, -50px 0px 20px 20px #0f121880, -70px 0px 20px 20px #0f121860, -90px 0px 20px 20px #0f121840, -110px 0px 20px 20px #0f121820, -130px 0px 20px 20px #0f121800, 30px 0px 20px 20px #0f1218, 50px 0px 20px 20px #0f121880, 70px 0px 20px 20px #0f121860, 90px 0px 20px 20px #0f121840, 110px 0px 20px 20px #0f121820, 130px 0px 20px 20px #0f121800;
+    box-shadow: -30px 0px 20px 20px var(--dark-bg), -50px 0px 20px 20px var(--dark-bg-tr80), -70px 0px 20px 20px var(--dark-bg-tr60), -90px 0px 20px 20px var(--dark-bg-tr40), -110px 0px 20px 20px var(--dark-bg-tr20), -130px 0px 20px 20px transparent, 30px 0px 20px 20px var(--dark-bg), 50px 0px 20px 20px var(--dark-bg-tr80), 70px 0px 20px 20px var(--dark-bg-tr60), 90px 0px 20px 20px var(--dark-bg-tr40), 110px 0px 20px 20px var(--dark-bg-tr20), 130px 0px 20px 20px transparent;
 }
 
 .upLeftErrors .upLeftError.upLeftErrorRed {
@@ -163,16 +172,6 @@ a {
     border-top: 0;
     width: 629px;
 }
-
-.page_yellowheader {
-    background: url('../img/header_yellow.png') repeat-x;
-    background-color: #EEE5B8;
-    border-right: solid 1px var(--dark-border);
-    border-left: solid 1px var(--dark-border);
-    border-bottom: solid 1px var(--dark-border);
-    overflow: hidden;
-}
-
 #wrapHI {
     border-right: solid 1px var(--dark-border);
     border-left: solid 1px var(--dark-border);
@@ -182,11 +181,12 @@ a {
     border-right: solid 1px var(--dark-border);
     border-left: solid 1px var(--dark-border);
 }
-.page_yellowheader span {
-    color: #C8BF85;
+.page_yellowheader {
+    background-color: var(--dark-accent-2) !important;
+    color: var(--dark-text) !important;
 }
-.page_yellowheader a {
-    color: #696029;
+.page_yellowheader span {
+    color: var(--dark-context);
 }
 .page-wrap {
     border-bottom: solid 1px var(--dark-border);
@@ -404,57 +404,8 @@ table {
 }
 
 .page_status {
-    font-weight: normal;
-    font-size: 11px;
-    padding: 3px 1px;
-    color: #000;
-    width: 380px;
-    height: auto !important;
-    overflow: hidden;
+    color: var(--dark-context);
 }
-
-.page_status_edit_button {
-    cursor: pointer;
-}
-
-.page_status_edit_button:hover {
-    text-decoration: underline;
-}
-
-.page_status_popup {
-    position: absolute;
-    border: 1px solid #CCC;
-    background-color: #f7f7f7;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
-    padding: 10px;
-    float: right;
-    margin-top: 5px;
-    margin-left: -6px;
-}
-
-.page_status_popup form {
-    margin: 0;
-}
-
-.button {
-    border-radius: 2px;
-    border: #595959;
-    font-size: 11px;
-    outline: none;
-    white-space: nowrap;
-    background: #595959;
-    background-position: 0 -16px;
-    color: #fff;
-    padding: 5px 9px;
-    text-shadow: 0 1px 0 #686868;
-    cursor: pointer;
-    text-decoration: none;
-}
-
-.button:active {
-    background: #444444;
-}
-
 .button:hover {
     color: #e8e8e8;
 }
@@ -615,8 +566,8 @@ span {
     background-color: #ddf3d7;
 }
 .msg.msg_err {
-    border-color: #9a205e;
-    background-color: #f5e9ec;
+    border-color: var(--dark-danger);
+    background-color: var(--dark-danger-tr);
 }
 .msg.msg_yellow {
     border-color:#D4BC4C;
@@ -771,10 +722,10 @@ textarea {
     background-color: var(--dark-surface-2);
 }
 #wallAttachmentMenu>a:hover {
-    background-color: var(--dark-text);
+    background-color: var(--dark-surface-3);
 }
 #wallAttachmentMenu>.header {
-    background-color: var(--dark-surface-3);
+    background-color: var(--dark-surface-2);
 }
 #ovkDraw {
     border: 1px solid var(--dark-border);
@@ -1113,9 +1064,6 @@ span.poll-result-count {
 .sugglist a {
     color: #626262;
 }
-.button.loaded {
-    background: #595959 url("/assets/packages/static/openvk/img/loading_mini.gif") no-repeat 50% 50%;
-}
 .sugglist a[data-toogled="true"] {
     color:#4a4a4a;
 }
@@ -1310,22 +1258,19 @@ hr {
 .tabs {
   border-bottom: 1px solid #597da3;
 }
-.button,
 input[class="button"]{
-  background: #6383a8;
-  color: #fff;
+  background: var(--dark-accent);
+  color: var(--dark-text);
 }
 .button.loaded {
-  background-color: #6383a8 !important;
+  background-color: var(--dark-accent) !important;
 }
-input[class="button"]:hover,
-.button:hover {
-  background-color: #6d8cb0;
-  color: #fff !important;
+input[class="button"]:hover {
+  background-color: var(--dark-accent);
+  color: var(--dark-text) !important;
 }
-input[class="button"]:active,
-.button:active {
-  background: #5c7ca1 !important;
+input[class="button"]:active {
+  background: var(--dark-accent-3) !important;
 }
 .header_nav_link {
     color: var(--dark-text) !important;
@@ -1366,19 +1311,14 @@ input[class="button"]:active,
 .comment {
   border-top: 1px var(--dark-border) solid;
 }
-.expand_button {
-  border-top: 1px solid #DAE1E8;
-}
-.expand_button:hover {
-  background-color: #E9EDF1;
-}
 .commentsTextFieldWrap {
   border-bottom: 1px solid var(--dark-border);
   border-top: 1px solid var(--dark-border);
   background: var(--dark-surface);
 }
-.post-share-button:hover, .post-like-button:hover {
-    background-color: #E9EDF1;
+.post-share-button:hover, 
+.post-like-button:hover {
+    background-color: var(--dark-surface-3);
 }
 .post-like-button span,
 .post-share-button span {
@@ -1387,16 +1327,6 @@ input[class="button"]:active,
 }
 .edit_link {
   color: #aaa;
-}
-.page_yellowheader {
-    color: #607387;
-    background: #E9EDF1;
-}
-.page_yellowheader span {
-  color: #AAB7C5;
-}
-.page_yellowheader a {
-  color: #2B587A;
 }
 a,
 .header_navigation .link a,
@@ -1418,13 +1348,8 @@ a,
 .button:hover,
 .button:active {
     background-color: var(--dark-hover) !important;
-    color: #fff !important;
-}
-.page_yellowheader {
-    background-color: #1d2330 !important;
     color: var(--dark-text) !important;
 }
-
 .upLeftErrors .upLeftError.upLeftErrorRed {
     background: var(--dark-danger) !important;
 }
@@ -1449,16 +1374,6 @@ a,
 .page_footer {
     color: var(--dark-muted) !important;
 }
-
-.button {
-    background-color: #2c3a63 !important;
-    border-color: #2c3a63 !important;
-    color: #f8fafc !important;
-}
-
-.button:active {
-    background-color: #1f2a48 !important;
-}
 .left_small_block > div:not([class]) {
     border-right: 3px solid var(--dark-surface);
 }
@@ -1478,19 +1393,19 @@ background: var(--dark-surface-2);
   color: #67829E !important;
 }
 .sidebar .navigation .link object[type="internal/link"] {
-  color: #45688e;
-  background: #d5dde5;
+  color: var(--dark-accent);
+  background: var(--dark-surface-2);
 }
 .sidebar .navigation .link a:hover object[type="internal/link"] {
-  background-color: #BBC7D3;
+  background-color: var(--dark-surface-3);
 }
 
 .public_info {
-  color:#45688e;
-  border-bottom:1px solid #e8ebee;
+  color: var(--dark-accent);
+  border-bottom:1px solid var(--dark-border);
 }
 .public_info h2 {
-  color:#45688e !important;
+  color: var(--dark-accent) !important;
 }
 .audioEntry:hover{
     background-color: var(--dark-surface-2);
@@ -1652,33 +1567,6 @@ body.dimmed.lighten > .dimmer {
     color: var(--dark-muted) !important;
 }
 
-a,
-.header_navigation .link a,
-.page_yellowheader a,
-.edit_link,
-.page_status_edit_button,
-.profile_link,
-.linkunderline:hover {
-    color: var(--dark-accent) !important;
-}
-
-.navigation .link:hover,
-.navigation_footer .link:hover,
-.profile_link:hover,
-.page_footer .link:hover,
-.button:hover,
-.button:active,
-.content_title_expanded,
-.content_title_unexpanded {
-    background-color: var(--dark-hover) !important;
-    color: #fff !important;
-}
-
-.page_yellowheader {
-    background-color: #1d2330 !important;
-    color: var(--dark-text) !important;
-}
-
 .upLeftErrors .upLeftError.upLeftErrorRed {
     background: var(--dark-danger) !important;
 }
@@ -1708,10 +1596,6 @@ a,
     background-color: var(--dark-accent) !important;
     border: none !important;
     color: var(--dark-text) !important;
-}
-
-.button:active {
-    background-color: var(--dark-accent-3) !important;
 }
 .bigPlayer .bigPlayerWrapper .absoluteButtons > div {
     background-color: var(--dark-surface-3);
@@ -2419,10 +2303,10 @@ body.dimmed > .dimmer {
 }
 
 .expand_button {
-    background-color: #eee;
+    background-color: var(--dark-surface);
 }
 .expand_button:hover {
-    background-color: #e5e5e5;
+    background-color: var(--dark-surface-3);
 }
 .notification_ballon {
     background-color: rgba(0, 0, 0, 0.7);
@@ -2450,16 +2334,6 @@ body.dimmed > .dimmer {
 .post-has-geo.appended-geo span {
     color: var(--dark-muted) !important;
 }
-
-
-.page_yellowheader a,
-.edit_link,
-.page_status_edit_button,
-.profile_link,
-.linkunderline:hover {
-    color: var(--dark-accent) !important;
-}
-
 .navigation .link:hover,
 .navigation_footer .link:hover,
 .profile_link:hover,
@@ -2469,11 +2343,6 @@ body.dimmed > .dimmer {
 .content_title_expanded,
 .content_title_unexpanded {
     background-color: var(--dark-hover) !important;
-    color: var(--dark-text) !important;
-}
-
-.page_yellowheader {
-    background-color: #1d2330 !important;
     color: var(--dark-text) !important;
 }
 
@@ -2500,16 +2369,6 @@ body.dimmed > .dimmer {
 
 .page_footer {
     color: var(--dark-muted) !important;
-}
-
-.button {
-    background-color: #2c3a63 !important;
-    border-color: #2c3a63 !important;
-    color: #f8fafc !important;
-}
-
-.button:active {
-    background-color: #1f2a48 !important;
 }
 .tippy-box[data-theme~=light] {
     color: var(--dark-context);
