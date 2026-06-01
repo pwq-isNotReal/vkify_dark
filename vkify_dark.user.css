@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           VKify Dark
 @namespace      https://github.com/pwq-isNotReal/vkify_dark
-@version        0.0.74-a
+@version        0.0.75-a
 @description    VKify Dark theme
 @author         pwq
 ==/UserStyle== */
@@ -576,7 +576,7 @@ span {
     border: 1px solid #C0CAD5;
 }
 .container_gray {
-    background: var(--dark-surface);
+    background: var(--dark-surface) !important;
 }
 .container_gray.bottom {
     border-bottom: var(--dark-border) solid 1px;
@@ -881,13 +881,13 @@ textarea {
 }
 
 .note_header {
-    background: #f7f7f7;
-    border-bottom: solid 1px #DAE1E8;
-    border-top: solid 1px #45688E;
+    background: var(--dark-surface-2);
+    border-bottom: solid 1px var(--dark-border);
+    border-top: solid 1px var(--dark-accent);
 }
 
 .note_header .note_title {
-    color: #45688E;
+    color: var(--dark-accent);
 }
 
 .note_footer {
@@ -897,8 +897,8 @@ textarea {
     border-top: #DEDEDE solid 1px;
 }
 .mb_tabs {
-    background-color: #F6F6F6;
-    border-bottom: #DEDEDE solid 1px;
+    background-color: var(var(--dark-surface));
+    border-bottom: var(--dark-border) solid 1px;
 }
 .mb_tab .special_counter {
     color: #595959;
@@ -1061,9 +1061,9 @@ span.poll-result-count {
     border-bottom: 1px solid #c7c727;
 }
 .page_wrap_content .page_search_options .search_option .search_option_name {
-    background-color: #EAEAEA;
-    color: #585858;
-    border-bottom: 2px solid #E4E4E4;
+    background-color: var(--dark-surface-2);
+    color: var(--dark-accent);
+    border-bottom: 2px solid var(--dark-border);
 }
     .content_page_error {
     background: white;
@@ -1263,16 +1263,16 @@ hr {
     background: rgba(1, 1, 1, 0.7);
 }
 .docListViewItem {
-    border-bottom: 1px solid #EDEDED;
+    border-bottom: 1px solid var(--dark-border);
 }
 .docListViewItem:hover, .attachButton:hover {
-    background: #f7f7f7;
+    background: var(--dark-surface-3);
 }
 .docListViewItem .doc_icon {
     background: #E6E6E6;
 }
 .docListViewItem .doc_content b {
-    color: black;
+    color: var(--dark-text);
 }
 .docListViewItem .doc_content .doc_content_info, .docListViewItem .doc_content span {
     color: #6d6d6d;
@@ -1352,11 +1352,6 @@ input[class="button"]:active,
 .content_title_expanded nobold a {
   font-weight: bold;
   color: #99ADC2;
-}
-.content_subtitle {
-  background-color: #F1F1F1;
-  border-bottom: 1px solid #F1F1F1;
-  color: #666;
 }
 .content_title_expanded {
   background: #DEE5EB !important;
@@ -1466,15 +1461,6 @@ a,
 }
 .left_small_block > div:not([class]) {
     border-right: 3px solid var(--dark-surface);
-}
-.completeness-gauge-gold > div {
-  background-color: #DEE5EB;
-}
-.completeness-gauge-gold > span {
-    color: #8BA1BC;
-}
-.completeness-gauge-gold {
-  background-color: #F1F1F1;
 }
 .profile_info_link {
 color: var(--dark-accent);
@@ -1727,9 +1713,15 @@ a,
 .button:active {
     background-color: var(--dark-accent-3) !important;
 }
-
+.bigPlayer .bigPlayerWrapper .absoluteButtons > div {
+    background-color: var(--dark-surface-3);
+    border-color: var(--dark-border);
+}
+.bigPlayer .bigPlayerWrapper .absoluteButtons > div:active {
+      background-color: var(--dark-surface);  
+}
 .bigPlayer {
-    background-color: var(--common-2);
+    background-color: var(--dark-surface-2);
     border-bottom: 1px solid var(--dark-border);
     box-shadow: none !important;
 }
@@ -1913,50 +1905,6 @@ a,
     background: #787878;
     cursor: pointer;
 }
-
-.editContainer {
-    display:table;
-    clear:both;
-    width:100%;
-    margin-top: 10px;
-}
-
-.editContainer .playerContainer {
-    width: 78%;
-    float: left;
-    max-width: 78%;
-    min-width: 68%;
-}
-
-.addToPlaylist {
-    width: 22%;
-    float: left;
-}
-
-#_addAudioAdditional {
-    padding: 6px;
-}
-
-#_addAudioAdditional #_tabs {
-    margin: 0px -6px;
-}
-
-#_addAudioAdditional #_tabs .mb_tabs {
-    background-color: unset;
-    border-bottom: unset;
-    padding: 0px 5px;
-}
-
-#_addAudioAdditional #_tip {
-    margin: 5px 0px;
-    display: block;
-}
-
-#_addAudioAdditional #_content {
-    margin-top: 6px;
-    padding: 1px;
-}
-
 /* mini player */
 #ajax_audio_player {
     background: rgba(44, 44, 44, 0.8);
