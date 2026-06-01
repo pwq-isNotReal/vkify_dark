@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           VKify Dark
 @namespace      https://github.com/pwq-isNotReal/vkify_dark
-@version        0.0.76-b
+@version        0.0.76-c
 @description    VKify Dark theme
 @author         pwq
 ==/UserStyle== */
@@ -1066,8 +1066,8 @@ span.poll-result-count {
     border-bottom: 2px solid var(--dark-border);
 }
     .content_page_error {
-    background: white;
-    border: #DEDEDE solid 1px;
+    background: var(--dark-surface);
+    border: var(--dark-border) solid 1px;
 }
 
 .content_page_error span {
@@ -1527,7 +1527,7 @@ background: var(--dark-surface-2);
   color: var(--dark-accent-3) !important;
 }
 .verticalGrayTabs a:not(.addAudioSmall):hover {
-    background-color: #E1E7ED;
+    background-color: var(--dark-surface-3);
 }
 .searchList #used,
 .verticalGrayTabs #used {
@@ -1842,20 +1842,6 @@ a,
     padding-right: 2px;
 }
 
-.friendsAudiosList {
-    margin-top: 8px;
-}
-
-.friendsAudiosList > a {
-    padding-left: 8px;
-}
-
-.friendsAudiosList .elem {
-    display: flex;
-    padding: 1px 1px;
-    width: 148px;
-}
-
 .friendsAudiosList .elem img {
     width: 26px;
     border-radius: 2px;
@@ -1897,12 +1883,11 @@ a,
 }
 
 .friendsAudiosList .elem:hover {
-    background: #E8EBF0;
-    cursor: pointer;
+    background: var(--dark-surface-3);
 }
 
 .friendsAudiosList #used .elem:hover {
-    background: #787878;
+    background: var(--dark-surface-2);
     cursor: pointer;
 }
 /* mini player */
