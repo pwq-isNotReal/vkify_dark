@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           VKify Dark
 @namespace      https://github.com/pwq-isNotReal/vkify_dark
-@version        0.0.78-d
+@version        0.0.78-e
 @description    VKify Dark theme
 @author         pwq
 ==/UserStyle== */
@@ -999,7 +999,6 @@ span.poll-result-count {
 }
 .page_wrap_content_main .def_row_content {
     border-bottom: var(--dark-border) solid 1px;
-    padding: none !important;
     padding: 3px !important
 }
 .page_wrap_content_main .def_row_content:first-of-type{
