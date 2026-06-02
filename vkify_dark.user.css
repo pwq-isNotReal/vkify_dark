@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           VKify Dark
 @namespace      https://github.com/pwq-isNotReal/vkify_dark
-@version        0.0.78-e
+@version        0.0.79
 @description    VKify Dark theme
 @author         pwq
 ==/UserStyle== */
@@ -123,6 +123,9 @@ a {
 .navigation .link {
     border-top: 1px solid var(--dark-border);
     color: var(--dark-bg);
+}
+.navigation a.link.edit-button {
+    color: var(--dark-context);
 }
 
 .navigation .link:hover {
@@ -530,6 +533,9 @@ ul {
 span {
     color: var(--dark-text) !important;
 }
+span.desc{
+    color: var(--dark-context) !important;
+}
 
 #logininput {
     border: 1px solid #C0CAD5;
@@ -589,7 +595,7 @@ span {
     color: #c5c5c5;
 }
 .crp-list {
-    border-top: 1px solid #d6d6d6;
+    border-top: 1px solid var(--dark-border);
 }
 .crp-entry {
     border-bottom: 1px solid var(--dark-border);
@@ -665,7 +671,7 @@ textarea {
 }
 
 .toTop {
-    background-color: var(--dark-bg)60;
+    background-color: var(--dark-bg-tr60);
     color: var(--dark-text);
 }
 
@@ -1306,9 +1312,23 @@ input[class="button"]:active {
   text-decoration: none;
   font-weight: bold;
 }
+/*
 .page_header .back, .page_header .left, .page_header .right, .header_navigation .logo_down {
     background-image: url(http://raw.githubusercontent.com/pwq-isNotReal/vkify_dark/refs/heads/main/assets/header.gif) !important;
     background-color: var(--dark-bg) !important;
+}
+*/
+.page_header .back {
+    background-color: var(--dark-accent);
+    background-image: none !important;
+    border-radius: 0px 0px 12px 12px;
+}
+.page_header .right, .header_navigation .logo_down {
+    background-image: none !important;
+    background-color: transparent !important;
+}
+.page_header .left {
+    background-image: url(https://raw.githubusercontent.com/pwq-isNotReal/vkify_dark/refs/heads/main/assets/logo.png) !important;
 }
 .content_title_expanded nobold,
 .content_title_expanded nobold span,
@@ -1529,7 +1549,7 @@ body.dimmed.lighten > .dimmer {
   border-top: 3px solid #507597;
 }
 .toTop:hover {
-  background-color: var(--dark-surface) !important;
+  background-color: var(--dark-surface-3) !important;
 }
 #backdrop ~ .toTop {
   background-color: rgba(218, 225, 232, .25);
@@ -2196,31 +2216,9 @@ div.avatar_block:hover .avatar_variants {
     width: 22px;
     background-position: -46px 0px;
 }
-.left_small_block > div > div > div > table > tbody > tr > td > a > img,
-table.User > tbody:nth-child(1) > tr:nth-child(1) > td:nth-child(1) > a:nth-child(1) > img:nth-child(1)
-{
-    width: 50px;
-    height: 50px;
-    object-fit: cover;
-    object-position: top;
+.content table{
+    border-spacing: 2px !important;
 }
-
-.post > tbody:nth-child(1) > tr:nth-child(1) > td:nth-child(1) > a:nth-child(1) > img:nth-child(1)
-{
-    width: 50px;
-    height: 50px;
-    object-fit: cover;
-    object-position: top;
-}
-
-div.content > table:nth-child(1) > tbody:nth-child(1) > tr:nth-child(1) > td:nth-child(1) > a:nth-child(1) > img:nth-child(1)
-{
-    width: 75px;
-    height: 75px;
-    object-fit: cover;
-    object-position: top;
-}
-
 .bsdn-player {
     background-color: black;
 }
@@ -2317,7 +2315,7 @@ body.dimmed > .dimmer {
     background: rgba(54, 54, 54, 0.95);
 }
 .post-menu .date {
-    color: grey;
+    color: var(--dark-context) !important;
 }
 
 .expand_button {
