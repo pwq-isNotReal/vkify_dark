@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           VKify Dark
 @namespace      https://github.com/pwq-isNotReal/vkify_dark
-@version        0.0.77
+@version        0.0.78
 @description    VKify Dark theme
 @author         pwq
 ==/UserStyle== */
@@ -620,11 +620,11 @@ textarea {
     background-color: var(--dark-bg);
 }
 #faqhead {
-    background: #fbf3c3;
-    border: 1px solid #d7cf9e;
+    background: var(--dark-warning-tr);
+    border: 1px solid var(--dark-warning);
 }
 #faqcontent {
-    background: #fafafa;
+    background: var(--dark-accent);
 }
 .ovk-lw-container {
     border-bottom: solid 1px #c4c4c4;
@@ -842,13 +842,13 @@ textarea {
 }
 
 .note_footer {
-    border-top: 1px solid #ddd;
+    border-top: 1px solid var(--dark-border);
 }
 .groups_options {
     border-top: #DEDEDE solid 1px;
 }
 .mb_tabs {
-    background-color: var(var(--dark-surface));
+    background-color: var(--dark-surface);
     border-bottom: var(--dark-border) solid 1px;
 }
 .mb_tab .special_counter {
