@@ -1268,7 +1268,7 @@ input[class="button"]:active {
 .home_button{
     background-image: url(https://raw.githubusercontent.com/pwq-isNotReal/vkify_dark/refs/heads/main/assets/logo.png) !important;
     background-color: transparent !important;
-    background-position: 3px -1px !important;
+    background-position: 6px -1px !important;
     width: 140px !important;
 }
 .header_navigation #search_box select[name='section']{
