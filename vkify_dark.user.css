@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           VKify Dark
 @namespace      https://github.com/pwq-isNotReal/vkify_dark
-@version        0.0.79-d
+@version        0.0.80
 @description    VKify Dark theme
 @author         pwq
 ==/UserStyle== */
@@ -22,8 +22,7 @@
     --dark-context: #6f6f6f;
     --dark-muted: #94a3b8;
     --dark-accent: #7c9cff;
-    --dark-accent-3: #6280db;
-    --dark-accent-2: #1d2330;
+    --dark-accent-tr: #7c9cff35;
     --dark-warning: #ffc96d;
     --dark-warning-tr: #ffc96d35;
     --dark-danger: #ff6b6b;
@@ -119,18 +118,17 @@ a {
 .header_navigation .link a:hover {
     color: var(--dark-text);
 }
-
 .navigation .link {
-    border-top: 1px solid var(--dark-border);
     color: var(--dark-bg);
+    border: none !important;
 }
 .navigation a.link.edit-button {
     color: var(--dark-context);
+    border: none !important;
 }
-
 .navigation .link:hover {
     background-color: var(--dark-surface);
-    border-top: 1px solid var(--dark-border);
+    border: none !important;
 }
 
 .navigation .link_soon {
@@ -233,17 +231,6 @@ a {
     border: 1px solid #ebf0f4;
 }
 
-.album-photo {
-    position: relative;
-    width: 25%;
-    max-height: 140px;
-    margin-bottom: 8px;
-    text-align: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
 .album-photo img {
     width: unset;
     max-height: 120px !important;
@@ -268,53 +255,9 @@ a {
     opacity: 0;
     transition: .1s opacity ease-out;
 }
-
-.album-photo:hover>.album-photo--delete {
-    opacity: 1;
-}
-
-.album-flex {
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.name-checkmark {
-    margin-left: 2pt;
-}
-
-#profile_link,
-.profile_link {
-    display: block;
-    box-sizing: border-box;
-    padding: 3px;
-    background: transparent;
-    border: none;
-    border-bottom: 1px solid #CCC;
-    font-size: 11px;
-    color: #2b587a;
-    width: 200px;
-    text-align: left;
-    cursor: pointer;
-    font-family: tahoma, verdana, arial, sans-serif;
-}
-
-.profile_link_form {
-    margin-bottom: 0;
-}
-
-#profile_links {
-    margin: 10px 0;
-}
-
 #profile_link:hover,
 .profile_link:hover {
     background: #ECECEC;
-}
-
-.action_links>.profile_link,
-.action_links>.profile_link_form>.profile_link {
-    width: 150px;
-    text-transform: lowercase;
 }
 
 .action_links.disable>a,
@@ -347,13 +290,6 @@ a {
     width: 30px;
     height: 7px;
     margin-left: 5px;
-}
-
-.page_footer {
-    margin-left: 130px;
-    padding-top: 5px;
-    clear: both;
-    text-align: center;
 }
 
 table {
@@ -394,14 +330,11 @@ table {
 }
 
 .page_footer .link {
-    padding: 3px 7px;
-    display: inline-block;
-    color: #444;
-    text-decoration: none;
+    color: var(--dark-accent);
 }
 
 .page_footer .link:hover {
-    background-color: #DFDFDF;
+    background-color: var(--dark-text);
 }
 
 .content_divider {
@@ -551,10 +484,10 @@ span.desc{
     border-bottom: var(--dark-border) solid 1px;
 }
 .tabs {
-    border-bottom: 1px solid #707070;
+    border-bottom: 1px solid var(--dark-accent);
 }
 #activetabs {
-    background: var(--dark-surface-2);
+    background: var(--dark-accent);
 }
 #activetabs:hover {
     color: var(--dark-surface-3);
@@ -576,12 +509,12 @@ span.desc{
     border: #DEDEDE solid 1px;
 }
 .msg {
-    border: 1pt solid #667e96;
-    background-color: #e6f2f3;
+    border: 1pt solid var(--dark-accent);
+    background-color: var(--dark-accent-tr);
 }
 .msg.msg_succ {
-    border-color: #3b584f;
-    background-color: #ddf3d7;
+    border-color: var(--dark-success);
+    background-color: var(--dark-success-tr);
 }
 .msg.msg_err {
     border-color: var(--dark-danger);
@@ -636,6 +569,9 @@ span.desc{
 }
 textarea {
     background-color: var(--dark-bg);
+}
+textarea:focus-visible {
+    outline-color: var(--dark-accent);
 }
 #faqhead {
     background: var(--dark-warning-tr);
@@ -792,7 +728,7 @@ textarea {
     border-top: 3px solid rgb(130, 130, 130);
 }
 .accent-box {
-    background-color: var(--dark-accent-2);
+    background-color: var(--dark-accent-tr);
     border: 1px solid var(--dark-accent);
 }
 
@@ -964,23 +900,23 @@ span.poll-result-count {
     box-shadow: 0px 0px 3px 1px #222;
 }
 .tour {
-    background: #F9F6E7;
-    border: 1px solid #BEAD61;
-    color: #000;
+    background: var(--dark-warning-tr) !important;
+    border: 1px solid var(--dark-warning) !important;
+    color: var(--dark-text) !important;
 }
 .tour div {
-    font-size: 11px; color:#000;
+    font-size: 11px; color: var(--dark-text);
 }
 #search_box input[type='search'] {
-    background-color: #fff;
+    background-color: var(--dark-surface);
 }
 .header_navigation #search_box #searchBoxFastTips {
-    background: #fff;
-    border: 1px solid #d8d8d8;
-    box-shadow: 2px 3px 4px -1px rgba(34, 60, 80, 0.2);
+    background: var(--dark-surface);
+    border: 1px solid var(--dark-border);
 }
-.header_navigation #search_box #searchBoxFastTips a:hover, .header_navigation #search_box #searchBoxFastTips a:focus {
-    background: #f3f3f3;
+.header_navigation #search_box #searchBoxFastTips a:hover,
+.header_navigation #search_box #searchBoxFastTips a:focus {
+    background: var(--dark-surface-2);
 }
 .header_navigation #search_box .search_box_button {
     border: solid 1px #575757;
@@ -1097,7 +1033,10 @@ span.poll-result-count {
     border-bottom: 1px solid #C7C7C7;
 }
 .attachment_selector #attachment_insert #attachment_insert_count {
-    background: white;
+    background: var(--dark-surface);
+}
+    .attachment_selector #attachment_insert #attachment_insert_count h4 {
+    color: var(--dark-context);
 }
 #show_more {
     background: var(--dark-surface-2)
@@ -1252,9 +1191,6 @@ hr {
 .docListViewItem .doc_icon.no_image span {
     color: #6b6b6b;
 }
-#activetabs {
-  background: #597da3;
-}
 .vova_link {
   color:#2b587a
 }
@@ -1278,9 +1214,6 @@ hr {
 }
 .mb_tab#active a {
   background-color: #517295 !important;
-}
-.tabs {
-  border-bottom: 1px solid #597da3;
 }
 input[class="button"]{
   background: var(--dark-accent);
@@ -1307,6 +1240,9 @@ input[class="button"]:active {
 .header_navigation #search_box input[type~="search"]::placeholder {
   color: #7A8CA0;
 }
+.header_navigation .link{
+    background-image: none !important;
+}
 .header_navigation .link a {
   color: #E8EFF7;
   text-decoration: none;
@@ -1320,19 +1256,25 @@ input[class="button"]:active {
 */
 .page_header {
     background-color: var(--dark-bg) !important;
+    background-image: none !important;
 }
 .page_header .back {
     background-color: var(--dark-accent);
     background-image: none !important;
     border-radius: 0px 0px 12px 12px;
 }
-.page_header .right, .header_navigation .logo_down {
+.page_header .right, .page_header .left, .header_navigation .logo_down {
     background-image: none !important;
     background-color: transparent !important;
 }
-.page_header .left {
+.home_button{
     background-image: url(https://raw.githubusercontent.com/pwq-isNotReal/vkify_dark/refs/heads/main/assets/logo.png) !important;
     background-color: transparent !important;
+    background-position: 3px -1px !important;
+    width: 140px !important;
+}
+.header_navigation #search_box select[name='section']{
+    background-color: var(--dark-surface) !important;
 }
 .content_title_expanded nobold,
 .content_title_expanded nobold span,
@@ -1414,7 +1356,7 @@ a,
 }
 
 .page_footer {
-    color: var(--dark-muted) !important;
+    color: var(--dark-context) !important;
 }
 .left_small_block > div:not([class]) {
     border-right: 3px solid var(--dark-surface);
@@ -1424,12 +1366,6 @@ color: var(--dark-accent);
 }
 .profile_info_link:hover {
 background: var(--dark-surface-2);
-}
-.navigation .link {
-  color: #2B587A;
-}
-.navigation .link:hover {
-  background-color: #E1E7ED;
 }
 .link.edit-button:hover {
   color: #67829E !important;
