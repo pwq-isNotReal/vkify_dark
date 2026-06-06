@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           VKify Dark
 @namespace      https://github.com/pwq-isNotReal/vkify_dark
-@version        0.0.80
+@version        0.0.80-a
 @description    VKify Dark theme
 @author         pwq
 ==/UserStyle== */
@@ -112,11 +112,12 @@ a {
 }
 
 .header_navigation .link a {
-    color: var(--dark-text);
+    color: var(--dark-text) !important;
 }
 
 .header_navigation .link a:hover {
-    color: var(--dark-text);
+    color: var(--dark-text) !important;
+    text-decoration: none !important;
 }
 .navigation .link {
     color: var(--dark-bg);
@@ -191,8 +192,9 @@ a {
     border-left: solid 1px var(--dark-border);
 }
 .page_yellowheader {
-    background-color: var(--dark-accent-2) !important;
+    background-color: var(--dark-accent-tr) !important;
     color: var(--dark-text) !important;
+    background-image: none !important;
 }
 .page_yellowheader span {
     color: var(--dark-context);
@@ -1243,11 +1245,6 @@ input[class="button"]:active {
 .header_navigation .link{
     background-image: none !important;
 }
-.header_navigation .link a {
-  color: #E8EFF7;
-  text-decoration: none;
-  font-weight: bold;
-}
 /*
 .page_header .back, .page_header .left, .page_header .right, .header_navigation .logo_down {
     background-image: url(http://raw.githubusercontent.com/pwq-isNotReal/vkify_dark/refs/heads/main/assets/header.gif) !important;
@@ -1255,8 +1252,9 @@ input[class="button"]:active {
 }
 */
 .page_header {
-    background-color: var(--dark-bg) !important;
+    background-color: var(--dark-accent);
     background-image: none !important;
+    border-radius: 0px 0px 12px 12px;
 }
 .page_header .back {
     background-color: var(--dark-accent);
@@ -1313,7 +1311,6 @@ input[class="button"]:active {
   color: #aaa;
 }
 a,
-.header_navigation .link a,
 .page_yellowheader a,
 .edit_link,
 .page_status_edit_button,
@@ -1322,7 +1319,6 @@ a,
     color: var(--dark-accent) !important;
 }
 
-.header_navigation .link a:hover,
 .profile_link:hover,
 .page_footer .link:hover,
 .navigation .link:hover,
@@ -1331,7 +1327,7 @@ a,
 .content_title_unexpanded,
 .button:hover,
 .button:active {
-    background-color: var(--dark-hover) !important;
+    background-color: var(--dark-surface-3) !important;
     color: var(--dark-text) !important;
 }
 .upLeftErrors .upLeftError.upLeftErrorRed {
